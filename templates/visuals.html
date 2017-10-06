@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Visualisations</title>
+		<script src="jquery.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<style type="text/css">.highcharts-tooltip h3 {   margin: 0.3em 0;}</style>
+	</head>
+	<body>
+		<div id="header">
+			<p>FINE ENERGY</p>
+			<ul id="hlink">
+				<li><a href="/">Home</a></li>
+				<li><a href="tabledata">Table Data</a></li>
+				<li><a href="p_table" class="dropbtn">Pivot Table</a></li>
+				<li><a class="active" href="visuals">Visualisations</a></li>
+				<li><a href="observations">Observations</a></li>
+			</ul>
+		</div>
+		<div id="c-intro">
+			<img src="image/graph.png" width="200" height="200">
+			<h1 id="c-title">
+			Visualisations
+			</h1>
+			<p id="c-stitle">
+			Bubble graph on the electrical data,<br> where the total electricity is compared with total cost.
+			</p>
+		</div>
+		<div id="content">
+		<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+
+        chart: {
+            type: 'bubble',
+            plotBorderWidth: 1,
+            zoomType: 'xy'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        title: {
+            text: 'Total cost versus energy consumption  in 27 major states'
+        },
+
+        
+        xAxis: {
+            gridLineWidth: 1,
+            title: {
+                text: 'Energy Consumption (kWh)'
+            },
+            labels: {
+                format: '{value} kWh'
+            },
+            
+        },
+
+        yAxis: {
+            startOnTick: false,
+            endOnTick: false,
+            title: {
+                text: 'Total Cost ($)'
+            },
+            labels: {
+                format: '{value} ($)'
+            },
+            maxPadding: 0.2,
+
+        },
+
+        tooltip: {
+            useHTML: true,
+            headerFormat: '<table>',
+            pointFormat: '<tr><th colspan="2"><h3>{point.state}</h3></th></tr>' +
+                '<tr><th>Total Cost:</th><td>{point.x}$</td></tr>' +
+                '<tr><th>Energy Consumption:</th><td>{point.y}kWh</td></tr>' +
+                '<tr><th>Avg Energy Consumption/person:</th><td>{point.z}kWh</td></tr>',
+            footerFormat: '</table>',
+            followPointer: true
+        },
+
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+
+
+        series: [{
+		 color: 'rgba(165,123,214,0.5)',
+           data: [
+                { x: 3558499, y: 633874, z: 3183, name: 'C,MA,NH,RI,V', state: 'Connecticut, Maine, New Hampshire, Rhode Island, Vermont' },
+                { x: 3712052 , y: 598929, z: 2857, name: 'MA', state: 'Massachusetts' },
+                { x: 5774122, y: 1019111, z: 2510, name: 'NY', state: 'New York' },
+                { x: 1894629, y: 336250, z: 3205, name: 'NJ', state: 'New Jersey' },
+                { x: 3038723, y: 393270, z: 4089, name: 'P', state: 'Pennsylvania' },
+                { x: 2614426, y: 299464, z: 3967, name: 'I', state: 'Illinois' },
+                { x: 4356629, y: 445872, z: 4356, name: 'I,O', state: 'Indiana, Ohio' },
+                { x: 2465641, y: 284704, z: 3252, name: 'MI', state: 'Michigan' },
+                { x: 2170701, y: 267808, z: 3710, name: 'W', state: 'Wisconsin' },
+                { x: 7588038, y: 766359, z: 4338, name: 'I,M,ND,SD', state: 'Iowa, Minnesota, North Dakota, South Dakota' },
+                { x: 3258532, y: 322688, z: 4421, name: 'K,N', state: 'Kansas, Nebraska' },
+                { x: 9651415, y: 815191, z: 5524, name: 'MI', state: 'Missouri' },
+                { x: 4148288, y: 451920, z: 5531, name: 'V', state: 'Virginia' },
+                { x: 3217122, y: 399154, z: 5248, name: 'D,DoC,M,WV', state: 'Delaware, District of Columbia, Maryland, West Virginia' },
+                { x: 6666109, y: 701699, z: 5629, name: 'G', state: 'Georgia' },
+				{ x: 4959838, y: 525356, z: 5402, name: 'NC,SC', state: 'North Carolina, South Carolina' },
+				{ x: 14347445, y: 1833836, z: 5629, name: 'F', state: 'Florida' },
+				{ x: 5649331, y: 580746, z: 6035, name: 'A,K,M', state: 'Alabama, Kentucky, Mississippi' },
+				{ x: 3836355, y: 358387, z: 6174, name: 'T', state: 'Tennessee' },
+				{ x: 3365791, y: 322698, z: 6070, name: 'A,L,O', state: 'Arkansas, Louisiana, Oklahoma' },
+				{ x: 14190310, y: 1793296, z: 5095, name: 'T', state: 'Texas' },
+				{ x: 2389312, y: 245506, z: 3255, name: 'C', state: 'Colorado' },
+				{ x: 1588786, y: 144323, z: 3366, name: 'I,M,U,W', state: 'Idaho, Montana, Utah, Wyoming' },
+				{ x: 3237213, y: 371510, z: 5377, name: 'AR', state: 'Arizona' },
+				{ x: 1514262, y: 178925, z: 3785, name: 'N,NM', state: 'Nevada, New Mexico' },
+				{ x: 11351003, y: 1674396, z: 2425, name: 'C', state: 'California' },
+				{ x: 5850258, y: 568333, z: 4733, name: 'A,H,O,W', state: 'Alaska, Hawaii, Oregon, Washington' }
+				
+            ]
+		}]
+    });
+});
+		</script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="height: 625px; width: 100%; margin: 0 auto"></div>
+		

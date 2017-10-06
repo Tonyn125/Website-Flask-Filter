@@ -1,0 +1,249 @@
+.active {
+	background-color: #1773FF;
+}
+
+#header {
+	z-index:1;
+	background-color: white;
+	margin: 50px;
+}
+#header p {
+	font-family: 'Droid Sans', sans-serif;
+	text-align: center;
+	font-size: 75px;
+	font-weight: bold;
+}
+
+#hlink {
+	font-family: 'Droid Sans', sans-serif;
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#hlink li {
+    float: left;
+}
+
+#hlink li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+#hlink li a:hover {
+    background-color: grey;
+}
+
+#tabl {
+    list-style-type: none;
+	background-color: #333;
+	float: right;
+	font-size: 30px;
+}
+#tabl a {
+	font-family: 'Droid Sans', sans-serif;
+	text-decoration: none;
+	color: white;
+	padding: 30px 30px
+	
+}
+
+#c-intro {
+	font-family: 'Droid Sans', sans-serif;
+	height: 250px;
+}
+#c-title {
+	font-size: 40px;
+	text-align: center;
+	margin-left: 50px;
+}
+img {
+    position: absolute;
+	margin-left: 200px;
+    z-index: -1;
+}
+#home-text {
+	text-align: justify;
+	text-justify: inter-word;
+	font-size: 20px;
+	margin-left: 417px;
+	font-family: 'Droid Sans', sans-serif;
+}
+#img-spec {
+	align: center;
+	text-decoration: initial;
+}
+h2{
+	font-family: 'Droid Sans', sans-serif;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	padding-left: 160px;
+}
+#img-ref {
+	font-size: 10px;
+	text-align: center;
+	font-family: 'Droid Sans', sans-serif;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+#c-body {
+	font-size: 20px;
+	text-align: justify;
+	text-justify: inter-word;
+	font-family: 'Droid Sans', sans-serif;
+	margin-left: 50px;
+}
+#c-stitle {
+	text-align: center;
+	font-size: 25px;
+}
+
+#longcontent {
+	height: 1450px;
+	font-size: 25px;
+	margin-left: 50px;
+	margin-right: 200px;
+}
+
+#content {
+	height: 1500px;
+	margin-left: 150px;
+	margin-right: 200px;
+}
+#contentob {
+	height: 2550px;
+	margin-left: 150px;
+	margin-right: 200px;
+	font-family: 'Droid Sans', sans-serif;
+}
+#obsp1 {
+	font-size: 25px;
+	color: black;
+}
+#obsp1c {
+	margin-left: 100px;
+	font-size: 17px;
+	margin-right: 100px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+#obsp2 {
+	font-size: 25px;
+	color: black;
+}
+#obsp2c {
+	margin-left: 100px;
+	font-size: 17px;
+	margin-right: 100px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+#obsp3 {
+	font-size: 25px;
+	color: black;
+}
+#obsp3c {
+	margin-left: 100px;
+	font-size: 17px;
+	margin-right: 100px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+#obsp4 {
+	font-size: 25px;
+	color: black;
+}
+#obsp4c {
+	margin-left: 100px;
+	font-size: 17px;
+	margin-right: 100px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+#obsp5 {
+	font-size: 25px;
+	color: black;
+}
+#obsp5c {
+	margin-left: 100px;
+	font-size: 17px;
+	margin-right: 100px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+.dropdown:hover .dropdown-c {
+    display: block;
+}
+
+.dropdown-c {
+	margin-right: 0;
+    display: none;
+    position: absolute;
+	text-align: center;
+    background-color: #333;
+    text-decoration: none;
+}
+.dropdown-c a {
+	padding: 18px 20px;
+    text-decoration: none;
+    color: black;
+	margin-right: 9px;
+	padding: 18px 20px;
+    text-decoration: none;
+    display: block;
+}
+#group1 {
+	margin-left: 150px;
+}
+
+#g1t {
+	font-family: 'Droid Sans', sans-serif;
+	text-align: center;
+	border-collapse:collapse;
+}
+#g1t th, td {
+    text-align: left;
+    padding: 14px;
+}
+
+
+
+#g1t th {
+    background-color: #333;
+    color: white;
+}
+
+
+#table_div {
+	border-style: solid;
+	#border-width: 10px, 20px, 10px, 20px;
+	border-color: black;
+	text-align: center;
+	width:1100px; 
+	height:600px; 
+	overflow:auto;
+	margin-top: 0px;
+}
+
+#footer {
+	color: white;
+	font-family: 'Droid Sans', sans-serif;
+	overflow: hidden;
+    background-color: #333;
+}
+
+#footer p {
+	text-align: center;
+}
+
+#footer p a {
+	color: white;
+	text-decoration: none;
+	padding-right: 20px;
+}

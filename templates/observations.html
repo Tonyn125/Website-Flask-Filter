@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Observations</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+		<script type="text/javascript">
+$(function () {
+
+    $(document).ready(function () {
+
+        // Build the chart
+        $('#container').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Average percentage of energy consumption per appliance'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Type',
+                colorByPoint: true,
+                data: [{
+                    name: 'Space Heating',
+                    y: 8.85
+                }, {
+                    name: 'Air Conditioning',
+                    y: 14.93,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Water Heating',
+                    y: 9.40
+                }, {
+                    name: 'Refrigerator',
+                    y: 11.02
+                }, {
+                    name: 'Other',
+                    y: 55.80
+                }]
+            }]
+        });
+    });
+});
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<p>FINE ENERGY</p>
+			<ul id="hlink">
+				<li><a href="/">Home</a></li>
+				<li><a href="tabledata">Table Data</a></li>
+				<li><a href="p_table" class="dropbtn">Pivot Table</a></li>
+				<li><a href="visuals">Visualisations</a></li>
+				<li><a class="active" href="observations">Observations</a></li>
+			</ul>
+		</div>
+		<div id="c-intro">
+			<img src="image/observe.png" width="150" height="150">
+			<h1 id="c-title">
+			Observations on the Dataset
+			</h1>
+			<p id="c-stitle">
+			Like an FAQ, many questions that are likely to be <br>asked upon using this website and its data
+			</p>
+		</div>
+		<div id="contentob">
+			<p id="obsp1">What is the electrical appliance that consumes the most energy on average?<p>
+			<p id="obsp1c"><br><b>From the pie chart it can be seen that the data is inclined towards the "other" category building up of over fifty percent of the pie chart. From the chart we can also see that seasonal appliances that are running continuously are a large contributor to high energy consumption rates.</b><br><br>
+            Assuming that the "other" category represents electricity usage sourcing from lighting, appliances and television, we can conclude that heating and cooling are not a main contributor to high energy consumption rates.<br>
+            This is quantitative evidence proving that the main contributor to high energy consumption rates is due to appliances left on draining energy from standby mode and other continuous cycles such as lighting and heating/cooling in the appropriate season.<br><p>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script>
+            
+			<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            <p id="img-ref">Fig 1: Average Percentage of Energy Consumption per Appliance</p>
+			<p id="obsp2"><br><br><br>Do cites with denser populations consume more energy than less dense areas by KWH per person?</p>
+			<p id="obsp2c"><b>From the graph under the Visualisations tab or through the table button below, we can conclude that not necessarily denser states will consume more energy.</b><br><br><br>
+            By finding the average useage of the each person in every selection zone, namely state group, divison or region, this eliminates the discrepancies across areas. Therefore, a proportionate standing can be evaluated across all areas.<br><br><br>
+            By doing so, the results show that state groups <b>generally</b> do have a linear relationship when it comes to measuring their energy usage per person and the relative size of the zone. This is further consolidated by the fact that in these zones, there is often regular seasonal fluctuations hence heating and cooling usage is expected to be high. On the other hand the outlier, the state of California, resulted in a low energy per person rate despite its large population. It is suspected that the state has more mild weather, and is technologically advanced with energy-saving options, that the energy consumption level is relatively low.</p>
+			<li id="tabl"><a href="visuals">Table</a></li>
+
+			<p id="obsp3"><br><br><br>How much is it per person to live in that particular area? Is it worth it?</p>
+			<p id="obsp3c"><b>From the graph under the Visualisations tab or through the table button below, our findings conclude that the "best place to be" would be a place with a reasonable cost per person and low energy consumption per person.</b><br><br><br>
+            By correlating the data between the average energy consumption per person in each area and the total cost of the whole area, it can be found that places with a higher energy usage per person tend to be places with varying weather. This prompts the consumption of more energy such as heating, cooling and lighting.<br><br><br>
+            Hence, areas with lower energy usage per person, have a constant weather pattern which is ideal for residing in. Whether or not it is "worth it" is dependant on the individual, namely if living at the expense of higher costs in a better area is ideal.</p>
+			<li id="tabl"><a href="visuals">Table</a></li>
+
+			<p id="obsp4"><br><br><br>Since we know which appliance consumes the most power. Then which one will end up costing the most money?</p>
+			<p id="obsp4c"><b>Refering back to <i>Fig 1</i> and the graph under Visualisations, it can be concluded that the appliance that will end up costing the most money will be the one with the highest consumption</b><br><br><br>
+            The reasoning is that it is assumed that the cost of using an electrical appliance is linearly proportionate to the cost of the energy consumed. The graph highlights this under its total area for each appliance.<br><br><br></p>
+			<li id="tabl"><a href="visuals">Table</a></li>
+
+            <p id="obsp5"><br><br><br>Is there a correlation between number of occupants in a residence and the total energy consumption?</p>
+            <p id="obsp5c"><b>There is a positive correlation between the number of occupants against the total energy consumption levels.</b><br><br><br>
+            From the pivot table provided, there shows a positive correlation between these two variables in the dataset. This indicates that the more people in the house there are, the more energy is consumed through daily activites and necessities.<br><br><br></p>
+            <li id="tabl"><a href="visuals">Table</a></li>
